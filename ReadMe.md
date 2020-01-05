@@ -7,7 +7,7 @@ This script part of this template asks a Jira instance for ticket specifics whic
 
 ## How it looks
 With the *Duotone Snow* theme it could look like
-![Screenshot](https://github.com/jmeischner/alfred-bear-jira-ticket/blob/master/screenshot.png?raw=true)
+![Screenshot](https://github.com/jmeischner/alfred-bear-jira-ticket/blob/public/screenshot.png?raw=true)
 
 ## Possible Placeholder
 - title
