@@ -1,7 +1,7 @@
 # {{JIRA_PREFIX}}{{answer}} {{title}}
 ~ by *{{creator.name}}* [{{type.name}}]
 ---
-#arbeit/ticket/{date:yyyy}/{date:MM} #arbeit/state/started
+#work/ticket/{date:yyyy}/{date:MM} #work/state/started
 ---
 ::Link::[{{JIRA_PREFIX}}{{answer}}](https://verimi.atlassian.net/browse/{{JIRA_PREFIX}}{{answer}})
 
@@ -13,6 +13,12 @@
 
 - [ ] Are these clear and unambiguous?
 
+## Brainstorming?
+
+
+## Any Complications?
+
+
 ## Comments
 {{#each comments}}
 ```md
@@ -21,8 +27,3 @@
 ~ by *{{author}}*
 
 {{/each}}
-
-## Brainstorming?
-
-
-## Any Complications?
