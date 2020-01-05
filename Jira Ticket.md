@@ -3,7 +3,7 @@
 ---
 #work/ticket/{date:yyyy}/{date:MM} #work/state/started
 ---
-::Link::[{{JIRA_PREFIX}}{{answer}}](https://verimi.atlassian.net/browse/{{JIRA_PREFIX}}{{answer}})
+::Link::[{{JIRA_PREFIX}}{{answer}}]({{JIRA_URL}}/browse/{{JIRA_PREFIX}}{{answer}})
 
 ## Description
 {{description}}
