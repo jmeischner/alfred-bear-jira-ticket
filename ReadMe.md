@@ -1,6 +1,8 @@
 # What's this?
 This is a template which could be used in combination with [alfred](https://www.alfredapp.com), [bear](https://bear.app) and the [alfred-bear workflow](https://github.com/jmeischner/alfred-bear).
 
+This should serve as a starting point to build an own template to work with jira tickets on an individual basis. To do private notes, quick thoughts and brainstorming and create design plans for a given ticket in the context of the existing external informations to that task.
+
 This script part of this template asks a Jira instance for ticket specifics which then can be used inside the markdown part.
 
 ## How it looks
