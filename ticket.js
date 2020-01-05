@@ -15,8 +15,10 @@ const secret = require('./secret');
 
 const getData = async variables => {
 
+    const prefix = variables.JIRA_PREFIX.endsWith('-') ? variables.JIRA_PREFIX : `${variables.JIRA_PREFIX}-`;
+
     const options = {
-        uri: `${variables.JIRA_URL}/rest/api/latest/issue/${variables.JIRA_PREFIX}${variables.answer}`,
+        uri: `${variables.JIRA_URL}/rest/api/latest/issue/${prefix}${variables.answer}`,
         json: true
     }
 
@@ -24,6 +26,7 @@ const getData = async variables => {
     const fields = ticket.fields;
 
     return {
+        JIRA_PREFIX: prefix,
         labels: fields.labels,
         creator: {
             name: fields.creator.displayName,
@@ -36,7 +39,7 @@ const getData = async variables => {
         },
         project: fields.project.name,
         description: J2M.toM(fields.description).trim(),
-        acceptanceCriteria: J2M.toM(fields.customfield_10207).replace(/(?:^)\*/, "- [ ]").replace(/(?:\n)\*/g, "\n- [ ]").trim(),
+        acceptanceCriteria: J2M.toM(fields[variables.ACCEPTANCE_CRITERIA]).replace(/(?:^)\*/, "- [ ]").replace(/(?:\n)\*/g, "\n- [ ]").trim(),
         title: fields.summary.trim(),
         comments: fields.comment.comments ? fields.comment.comments.map(c => {
             return {
