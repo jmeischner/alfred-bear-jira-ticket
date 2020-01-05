@@ -1,0 +1,21 @@
+{
+  "name": "bear-template-jira-ticket",
+  "version": "0.0.1",
+  "description": "A bear template for working with Jira Tickets",
+  "main": "ticket.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "bear",
+    "template",
+    "alfred"
+  ],
+  "author": "Jan Meischner",
+  "license": "ISC",
+  "dependencies": {
+    "j2m": "^1.1.0",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.5"
+  }
+}
