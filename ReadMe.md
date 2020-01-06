@@ -28,6 +28,7 @@ With the *Duotone Snow* theme it could look like
 
 # Installation
 Clone or download this repository and put it e.g. into your *bearTemplateDirectory* - `~/.bear-templates` - which is usually the place where your *bearTemplateIndex* - `index.yml` - file is located.
+Open a *terminal window* in this directory and execute `npm install`.
 
 Then put the following lines to your *index.yml*
 
