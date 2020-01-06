@@ -12,13 +12,16 @@
 {{acceptanceCriteria}}
 
 - [ ] Are these clear and unambiguous?
+---
+## Brainstorming
 
-## Brainstorming?
+
 
 
 ## Any Complications?
 
 
+---
 ## Comments
 {{#each comments}}
 ```md
