@@ -25,6 +25,8 @@ const getData = async variables => {
     const ticket = await rp(options).auth(variables.JIRA_USER, secret.API_TOKEN);
     const fields = ticket.fields;
 
+    const acceptanceCriteria = fields[variables.ACCEPTANCE_CRITERIA] || '';
+
     return {
         JIRA_PREFIX: prefix,
         labels: fields.labels,
@@ -39,7 +41,7 @@ const getData = async variables => {
         },
         project: fields.project.name,
         description: J2M.toM(fields.description).trim(),
-        acceptanceCriteria: J2M.toM(fields[variables.ACCEPTANCE_CRITERIA]).replace(/(?:^)\*/, "- [ ]").replace(/(?:\n)\*/g, "\n- [ ]").trim(),
+        acceptanceCriteria: J2M.toM(acceptanceCriteria).replace(/(?:^)\*/, "- [ ]").replace(/(?:\n)\*/g, "\n- [ ]").trim(),
         title: fields.summary.trim(),
         comments: fields.comment.comments ? fields.comment.comments.map(c => {
             return {
